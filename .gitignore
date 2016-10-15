@@ -8,3 +8,4 @@ dist/
 ghostdriver.log
 pytestdebug.log
 .tox/
+db.sqlite3
