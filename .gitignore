@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+.idea/
+venv/
+.cache/
+dist/
+*egg-info/
+ghostdriver.log
+pytestdebug.log
+.tox/
