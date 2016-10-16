@@ -11,7 +11,7 @@ def test_non_authenticated_user_cannot_access_test_page(selenium, live_server):
     assert 'fail' in selenium.page_source
 
 
-def test_authenticated_user_can_access_blank_login_page(selenium, live_server):
+def test_authenticated_user_can_access_test_page(selenium, live_server):
     User = get_user_model()
     user = User.objects.create_user(username='selenium', password='password')
 
