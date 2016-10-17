@@ -6,6 +6,7 @@ venv/
 dist/
 *egg-info/
 ghostdriver.log
+geckodriver.log
 pytestdebug.log
 .tox/
 db.sqlite3
