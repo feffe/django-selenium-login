@@ -24,6 +24,28 @@ Installation
 ------------
 Use pip to install django-selenium-login:
 
-.. code-block:: python
+.. code-block:: shell
 
     pip install django-selenium-login
+
+For developers
+--------------
+Create venv using:
+
+.. code-block:: shell
+
+    make venv
+
+Run tests for multiple versions of Python and Django for a specific browser using tox:
+
+.. code-block:: shell
+
+    tox -- --driver=Chrome
+
+Use environment variable SESSION_ENGINE to change authentication backend.
+
+To run tests for all authentication backends for Chrome, Firefox, and PhantomJS:
+
+.. code-block:: shell
+
+    ./run_tests.sh
