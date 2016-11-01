@@ -13,6 +13,7 @@ setup(
     description = ("A quick login for selenium tests to be used in Django projects"),
     license = "MIT",
     keywords = "selenium django login",
+    url = "https://github.com/feffe/django-selenium-login",
     packages=['seleniumlogin', 'test_'],
     long_description=read('README.rst'),
     classifiers=[
