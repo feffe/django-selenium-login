@@ -19,3 +19,11 @@ With django-selenium-login you can use the force_login function to force a user 
         selenium.get('{}/a/url/which/requires/login/'.format(live_server.url))
 
 Before setting the session cookie for the Selenium driver, the driver must access a page in the project. By default it will try to access the /page_404/ page. This can be changed by changing the SELENIUM_LOGIN_START_PAGE setting in the settings file for your tests. A blank page is used for the tests in this lib.
+
+Installation
+------------
+Use pip to install django-selenium-login:
+
+.. code-block:: python
+
+    pip install django-selenium-login
