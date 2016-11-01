@@ -10,5 +10,3 @@ def login_required(request):
 
 def blank(request):
     return HttpResponse('')
-
-

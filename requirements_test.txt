@@ -1,4 +1,5 @@
+flake8
 pytest
 pytest-django
-selenium
 pytest-selenium
+selenium
