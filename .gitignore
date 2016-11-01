@@ -4,6 +4,7 @@ __pycache__/
 venv/
 .cache/
 dist/
+build/
 *egg-info/
 ghostdriver.log
 geckodriver.log
