@@ -14,10 +14,12 @@ def force_login(user, driver, base_url):
     session[HASH_SESSION_KEY] = user.get_session_auth_hash()
     session.save()
 
+    domain = base_url.split(':')[-2].split('/')[-1]
     cookie = {
         'name': settings.SESSION_COOKIE_NAME,
         'value': session.session_key,
-        'path': '/'
+        'path': '/',
+        'domain': domain
     }
 
     driver.add_cookie(cookie)
