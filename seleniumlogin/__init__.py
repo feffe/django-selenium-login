@@ -14,7 +14,7 @@ def force_login(user, driver, base_url):
     session[HASH_SESSION_KEY] = user.get_session_auth_hash()
     session.save()
 
-    domain = base_url.split(':')[-2].split('/')[-1]
+    domain = base_url.rpartition('://')[2].split('/')[0].split(':')[0]
     cookie = {
         'name': settings.SESSION_COOKIE_NAME,
         'value': session.session_key,
