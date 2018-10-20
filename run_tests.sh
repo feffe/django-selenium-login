@@ -12,5 +12,4 @@ do
     export SESSION_ENGINE=$session
     tox -- --driver=Chrome
     tox -- --driver=Firefox
-    tox -- --driver=PhantomJS --liveserver=127.0.0.1:8000-8100
 done
