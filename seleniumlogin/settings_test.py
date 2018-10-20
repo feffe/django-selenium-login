@@ -17,7 +17,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
-MIDDLEWARE_CLASSES = MIDDLEWARE
 
 ROOT_URLCONF = 'seleniumlogin.urls'
 
