@@ -11,5 +11,5 @@ for session in "${session_engines[@]}"
 do
     export SESSION_ENGINE=$session
     tox -- --driver=Chrome
-    tox -- --driver=Firefox
+    tox -- --driver=Firefox --liveserver=127.0.0.1
 done
