@@ -46,7 +46,7 @@ Run tests for multiple versions of Python and Django for a specific browser usin
 
 Use environment variable SESSION_ENGINE to change authentication backend.
 
-To run tests for all authentication backends for Chrome, Firefox, and PhantomJS:
+To run tests for all authentication backends for Chrome and Firefox:
 
 .. code-block:: shell
 
