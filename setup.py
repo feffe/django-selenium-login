@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name="django-selenium-login",
-    version="1.0.2",
+    version="1.1.0",
     author="Fredrik Westermark",
     author_email="feffe.westermark@gmail.com",
     description=("A quick login for selenium tests to be used in Django projects"),
@@ -19,7 +19,7 @@ setup(
     install_requires=['django>=1.11'],
     long_description=read('README.rst'),
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Topic :: Software Development :: Quality Assurance",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
