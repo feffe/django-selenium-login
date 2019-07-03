@@ -16,7 +16,7 @@ setup(
     keywords="selenium django login",
     url="https://github.com/feffe/django-selenium-login",
     packages=['seleniumlogin', 'test_'],
-    install_requires=['django>=1.8'],
+    install_requires=['django>=1.11'],
     long_description=read('README.rst'),
     classifiers=[
         "Development Status :: 4 - Beta",
