@@ -2,7 +2,7 @@ from importlib import import_module
 from django.contrib.auth import SESSION_KEY, BACKEND_SESSION_KEY, HASH_SESSION_KEY
 
 
-def force_login(user, driver, base_url):
+def force_login(user, driver, base_url, set_domain_in_session_cookie=True):
     from django.conf import settings
     SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
     selenium_login_start_page = getattr(settings, 'SELENIUM_LOGIN_START_PAGE', '/page_404/')
@@ -14,13 +14,16 @@ def force_login(user, driver, base_url):
     session[HASH_SESSION_KEY] = user.get_session_auth_hash()
     session.save()
 
-    domain = base_url.rpartition('://')[2].split('/')[0].split(':')[0]
     cookie = {
         'name': settings.SESSION_COOKIE_NAME,
         'value': session.session_key,
-        'path': '/',
-        'domain': domain
+        'path': '/'
     }
-
+    if set_domain_in_session_cookie:
+        cookie.update(
+            {
+                'domain': base_url.rpartition('://')[2].split('/')[0].split(':')[0]
+            }
+        )
     driver.add_cookie(cookie)
     driver.refresh()
