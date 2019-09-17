@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  testchrome:
+    image: selenium/standalone-chrome:latest
+    container_name: testchrome
+
+  test:
+    build: .
+    container_name: test
+    volumes:
+      - .:/code
+      - /code/venv
+      - /code/.git
+      - /code/.tox

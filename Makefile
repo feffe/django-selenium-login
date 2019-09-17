@@ -11,5 +11,21 @@ lint:
 
 venv: $(ACTIVATE)
 $(ACTIVATE): requirements.txt requirements_dev.txt requirements_test.txt
-	test -d venv || virtualenv venv
+	test -d venv || virtualenv venv -p python3.7
 	. $(ACTIVATE); pip install -r requirements_dev.txt -r requirements.txt
+
+.PHONY: docker-setup
+docker-setup:
+	docker-compose pull
+	docker-compose up -d
+	./wait-for-selenium-server.sh
+
+.PHONY: docker-teardown
+docker-teardown:
+	docker-compose down
+
+.PHONY: run-tests-in-docker
+run-tests-in-docker: docker-setup
+	docker exec test sh -c "pytest . --ds=seleniumlogin.settings_test --driver=Remote --capability browserName chrome --host=testchrome --liveserver=0.0.0.0 --base-url=http://test"
+
+
