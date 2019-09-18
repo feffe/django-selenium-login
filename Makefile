@@ -26,6 +26,6 @@ docker-teardown:
 
 .PHONY: run-tests-in-docker
 run-tests-in-docker: docker-setup
-	docker exec test sh -c "pytest . --ds=seleniumlogin.settings_test --driver=Remote --capability browserName chrome --host=testchrome --liveserver=0.0.0.0 --base-url=http://test"
+	docker exec test sh -c "pytest . --driver=Remote --capability browserName chrome --host=testchrome --liveserver=0.0.0.0 --base-url=http://test"
 
 
