@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
     name="django-selenium-login",
-    version="1.1.0",
+    version="2.0.0",
     author="Fredrik Westermark",
     author_email="feffe.westermark@gmail.com",
     description=("A quick login for selenium tests to be used in Django projects"),
