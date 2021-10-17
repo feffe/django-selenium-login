@@ -11,7 +11,7 @@ lint:
 
 venv: $(ACTIVATE)
 $(ACTIVATE): requirements.txt requirements_dev.txt requirements_test.txt
-	test -d venv || virtualenv venv -p python3.7
+	test -d venv || virtualenv venv -p python3.8
 	. $(ACTIVATE); pip install -r requirements_dev.txt -r requirements.txt
 
 .PHONY: docker-setup

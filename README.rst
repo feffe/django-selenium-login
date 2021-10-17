@@ -5,7 +5,7 @@ django-selenium-login sets a session cookie for the Selenium driver and a create
 
 Usage
 -----
-With django-selenium-login you can use the force_login function to force a user to qucikly login before using the the Selenium driver to proceeds on pages that requires login. The function takes a Django user, a Selenium driver, and the base url for the live server. Here is an example of how to use the force_login function in a test:
+With django-selenium-login you can use the force_login function to force a user to quickly login before using the the Selenium driver to proceeds on pages that requires login. The function takes a Django user, a Selenium driver, and the base url for the live server. Here is an example of how to use the force_login function in a test:
 
 .. code-block:: python
 
