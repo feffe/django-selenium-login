@@ -9,7 +9,7 @@ def force_login(user, driver, base_url):
     driver.get('{}{}'.format(base_url, selenium_login_start_page))
 
     session = SessionStore()
-    session[SESSION_KEY] = str(user.id)
+    session[SESSION_KEY] = user._meta.pk.value_to_string(user)
     session[BACKEND_SESSION_KEY] = settings.AUTHENTICATION_BACKENDS[0]
     session[HASH_SESSION_KEY] = user.get_session_auth_hash()
     session.save()
