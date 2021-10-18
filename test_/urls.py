@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import path
 from .views import login_required, blank
 
 urlpatterns = [
-    url(r'^login_required', login_required),
-    url(r'^blank', blank),
+    path('login_required/', login_required),
+    path('blank/', blank),
 ]
